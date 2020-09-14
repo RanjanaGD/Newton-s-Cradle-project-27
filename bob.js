@@ -1,10 +1,10 @@
 class bob{
     constructor(x, y, r){
         var options = {
-            isStatic:true,
-            restitution:0.3,
-            friction:0.5,
-            density:1.2
+            isStatic:false,
+            restitution:1,
+            friction:0,
+            density:0.8
     }
     this.x=x;
     this.y=y;
@@ -18,12 +18,12 @@ display(){
    
     var pos=this.body.position;
 
-    push()
+    push();
     translate(pos.x,pos.y);   
     rectMode(CENTER);
     fill(252,0,253)
     ellipse(0,0,this.r,this.r);
-    pop()
+    pop();
   }
 
 
