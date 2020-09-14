@@ -6,10 +6,7 @@ class Rope{
      var options = {
             bodyA: body1,
             bodyB: body2,
-           pointB:{x:this.offsetX,y:this.offsetY},
-
-         stiffness:0.1,
-         length:10
+           pointB:{x:this.offsetX,y:this.offsetY}
 
         }
         this.rope = Constraint.create(options);
@@ -21,22 +18,17 @@ class Rope{
         var pointB = this.rope.bodyB.position;
 
         strokeWeight(2);
-    fill("red");
+    
 
         var Anchor1X=pointA.x
         var Anchor1Y=pointA.y
 
-        var Anchor2X=pointA.x+this.offsetX
-        var Anchor2Y=pointA.y+this.offsetY
+        var Anchor2X=pointB.x+this.offsetX
+        var Anchor2Y=pointB.y+this.offsetY
 
         line(Anchor1X,Anchor1Y,Anchor2X,Anchor2Y);
     }
     
 }
-
-
-
-
-
 
 
